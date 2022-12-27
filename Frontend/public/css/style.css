@@ -340,6 +340,10 @@ ol {
 .site-logo {
 	display: inline-block;
 }
+.site-logo-img {
+	margin-top: -15px;
+	margin-bottom: -20px;
+}
 
 .header-search-form {
 	width: 100%;
@@ -928,6 +932,7 @@ ol {
 -------------------------*/
 
 .product-filter-section {
+	margin-top: 100px;
 	padding-bottom: 60px;
 }
 
@@ -2417,4 +2422,10 @@ ol {
 	.social-links a span {
 		display: none;
 	}
+}
+
+/*others*/
+.footer_row{
+	width: 50%;
+ 	margin: 0 auto;
 }
