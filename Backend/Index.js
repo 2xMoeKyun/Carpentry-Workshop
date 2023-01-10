@@ -1,23 +1,57 @@
+const { response } = require('express');
 const express = require('express');
+const mysql = require('mysql')
 
-const PORT  = process.env.PORT || 3001
+const PORT = process.env.PORT || 3001
 
 const app = express()
-
-app.use(express.json())
-
-app.listen(PORT, () => {
-    console.log(`Server starting on port ${PORT}`)
+const conn = mysql.createConnection({
+    host: "localhost",
+    port: "3306",
+    user: "root",
+    database: "workshopdb",
+    password: "root",
 })
 
+app.use(express.json())
+async function startApp() {
+    try {
+        conn.connect(function (err /*, result*/ ) {
+            if (err) console.log(err);
+            else {
+                console.log('Data base connected succesfuly');
+            }
+        });
+        app.listen(PORT, () => {
+            console.log(`Server starting on port ${PORT}`)
+        })
+    } catch (err) {
+        console.log(err)
+    }
+}
+startApp()
+
 app.get('/api', (req, res) => {
-    console.log(req.query)
-    res.json({
-        message: "привет из бэка "
-    })
+    const sqlquery = 'select * from product';
+    conn.query(sqlquery, (err, result) => {
+        if (err) console.log(err);
+        else res.send(result)
+    });
 })
 
 app.post('/api/post', (req, res) => {
     console.log(req.body)
-    res.status(200).json('server is worling')
+    var {
+        name,
+        price,
+        info
+    } = req.body
+    const sqlquery = `insert into product (Name, Price, Info) values ('${name}',${price},'${info}');`
+    conn.query(sqlquery, (err, result) => {
+        if (err) console.log(err);
+        else res.json({
+            message: "Thanks"
+        });
+    });
+
 })
