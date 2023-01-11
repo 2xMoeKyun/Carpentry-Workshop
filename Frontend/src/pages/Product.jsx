@@ -45,7 +45,7 @@ function Product() {
                 <i className="fa fa-star-o fa-fade"></i>
               </div>
               <div className="p-review">
-                <a href="">3 отзыва</a>|<a href="">Добавьте своё очко</a>
+                <a href="">3 отзыва</a>|<a href="">Добавьте свой отзыв</a>
               </div>
               <div className="quantity">
                 <p>Количество</p>
