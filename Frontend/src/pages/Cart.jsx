@@ -9,7 +9,7 @@ function Cart() {
         <div class="container">
           <h4>Корзина</h4>
           <div class="site-pagination">
-            <a href="/">Главная</a> / <a href="#">Корзиа</a>
+            <a href="/">Главная</a> / <a href="#">Корзина</a>
           </div>
         </div>
       </div>
