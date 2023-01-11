@@ -1,6 +1,7 @@
 const { response } = require('express');
 const express = require('express');
-const mysql = require('mysql')
+const mysql = require('mysql');
+var cors = require('cors');
 
 const PORT = process.env.PORT || 3001
 
@@ -12,6 +13,9 @@ const conn = mysql.createConnection({
     database: "workshopdb",
     password: "root",
 })
+
+
+app.use(cors())
 
 app.use(express.json())
 async function startApp() {

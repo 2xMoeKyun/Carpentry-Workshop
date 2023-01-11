@@ -1,5 +1,12 @@
 import React from "react";
 
+
+// function FRTC(){
+//   fetch('/api/')
+//   .then(response => response.json())
+//   .then(commits => alert(commits[0].author.login));
+// }
+
 function Header() {
   return (
     <header className="header-section">
