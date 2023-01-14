@@ -133,7 +133,7 @@ ol {
 	padding: 18px 47px 14px;
 	border-radius: 50px;
 	text-transform: uppercase;
-	background: #f51167;
+	background: #414141;
 	color: #fff;
 	line-height: normal;
 	cursor: pointer;
@@ -1567,7 +1567,7 @@ ol {
 }
 
 .product-details .p-stock span {
-	color: #f51167;
+	color: #00d636;
 }
 
 .product-details .p-rating {

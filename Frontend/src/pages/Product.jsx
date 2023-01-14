@@ -45,7 +45,7 @@ function Product() {
                 <i className="fa fa-star-o fa-fade"></i>
               </div>
               <div className="p-review">
-                <a href="">3 отзыва</a>|<a href="">Добавьте своё очко</a>
+                <a href="">3 отзыва</a>|<a href="">Добавьте свой отзыв</a>
               </div>
               <div className="quantity">
                 <p>Количество</p>
@@ -118,8 +118,8 @@ function Product() {
       </section>
 
       <section className="related-product-section">
-        <div className="container">
-          <div className="product-slider owl-carousel">
+        {/* <div className="container"> */}
+          {/* <div className="product-slider owl-carousel">
             <div className="product-item">
               <div className="pi-pic">
                 <img src="./img/product/1.jpg" alt="" />
@@ -212,7 +212,7 @@ function Product() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       
